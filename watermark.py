@@ -130,8 +130,9 @@ def main() -> None:
     parser.add_argument("--quality", type=int, default=92, help="JPEG/WebP output quality")
     args = parser.parse_args()
 
-    input_dir = Path(".")
+    input_dir = Path("./test")
     watermark_path = Path("watermark.png")
+    #args.position = "top,bottom"
 
     if not input_dir.exists() or not input_dir.is_dir():
         raise SystemExit(f"Input folder does not exist: {input_dir}")
